@@ -1,8 +1,10 @@
-// ========== Interval.java ==========
 package com.vsge.core.theory;
 
 /**
  * Represents a musical interval between two notes.
+ * 
+ * @author VSGE Team
+ * @version 1.0.0
  */
 public enum Interval {
   UNISON(0, "P1"),

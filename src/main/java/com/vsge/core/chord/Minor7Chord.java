@@ -6,21 +6,22 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Major triad chord implementation.
+ * Minor 7th chord implementation.
  * 
  * @author VSGE Team
  * @version 1.0.0
  */
-public class MajorChord extends Chord {
-    public MajorChord(Note root) {
-        super(root, "");
+public class Minor7Chord extends Chord {
+    public Minor7Chord(Note root) {
+        super(root, "m7");
     }
 
     @Override
     protected List<Interval> getIntervals() {
         return Arrays.asList(
-            Interval.MAJOR_THIRD,
-            Interval.PERFECT_FIFTH
+            Interval.MINOR_THIRD,
+            Interval.PERFECT_FIFTH,
+            Interval.MINOR_SEVENTH
         );
     }
 }

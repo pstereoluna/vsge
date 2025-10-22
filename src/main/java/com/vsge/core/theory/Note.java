@@ -1,9 +1,11 @@
-// ========== Note.java ==========
 package com.vsge.core.theory;
 
 /**
  * Represents a musical note with pitch class and octave.
  * Immutable class following the value object pattern.
+ * 
+ * @author VSGE Team
+ * @version 1.0.0
  */
 public class Note implements Comparable<Note> {
   public enum PitchClass {
@@ -67,6 +69,23 @@ public class Note implements Comparable<Note> {
   @Override
   public int hashCode() {
     return Integer.hashCode(midiNumber);
+  }
+
+  @Override
+  public String toString() {
+    return pitch.name() + octave;
+  }
+
+  public PitchClass getPitch() {
+    return pitch;
+  }
+
+  public int getOctave() {
+    return octave;
+  }
+
+  public int getMidiNumber() {
+    return midiNumber;
   }
 }
 

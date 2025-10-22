@@ -1,4 +1,3 @@
-// ========== PlayStyle.java ==========
 package com.vsge.style;
 
 import com.vsge.core.chord.Chord;
@@ -7,6 +6,9 @@ import java.util.List;
 
 /**
  * Strategy pattern interface for different playing styles.
+ * 
+ * @author VSGE Team
+ * @version 1.0.0
  */
 public interface PlayStyle {
   /**

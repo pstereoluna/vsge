@@ -6,21 +6,21 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Major triad chord implementation.
+ * Diminished triad chord implementation.
  * 
  * @author VSGE Team
  * @version 1.0.0
  */
-public class MajorChord extends Chord {
-    public MajorChord(Note root) {
-        super(root, "");
+public class DiminishedChord extends Chord {
+    public DiminishedChord(Note root) {
+        super(root, "°");
     }
 
     @Override
     protected List<Interval> getIntervals() {
         return Arrays.asList(
-            Interval.MAJOR_THIRD,
-            Interval.PERFECT_FIFTH
+            Interval.MINOR_THIRD,
+            Interval.TRITONE
         );
     }
 }

@@ -1,11 +1,15 @@
-// ========== Chord.java ==========
 package com.vsge.core.chord;
 
+import com.vsge.core.theory.Note;
+import com.vsge.core.theory.Interval;
 import java.util.*;
 
 /**
  * Abstract base class for all chord types.
  * Demonstrates inheritance and template method pattern.
+ * 
+ * @author VSGE Team
+ * @version 1.0.0
  */
 public abstract class Chord {
   protected final Note root;

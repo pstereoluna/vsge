@@ -1,11 +1,8 @@
-// ========== Main.java ==========
 package com.vsge;
 
 import com.vsge.ui.ConsoleUI;
 import com.vsge.audio.MidiService;
-import com.vsge.engine.PlaybackEngine;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.logging.Logger;
 
 /**
  * Main entry point for Virtual Stringless Guitar Engine.
@@ -14,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * @version 1.0.0
  */
 public class Main {
-  private static final Logger logger = LoggerFactory.getLogger(Main.class);
+  private static final Logger logger = Logger.getLogger(Main.class.getName());
 
   /**
    * Application entry point.
@@ -33,7 +30,7 @@ public class Main {
       ui.start();
 
     } catch (Exception e) {
-      logger.error("Fatal error during application startup", e);
+      logger.severe("Fatal error during application startup: " + e.getMessage());
       System.err.println("Failed to start VSGE: " + e.getMessage());
       System.exit(1);
     }
@@ -43,10 +40,10 @@ public class Main {
    * Initializes application components.
    */
   private static void initializeApplication() throws Exception {
-    logger.debug("Initializing MIDI service...");
+    logger.fine("Initializing MIDI service...");
     MidiService.getInstance().initialize();
 
-    logger.debug("Loading default configurations...");
+    logger.fine("Loading default configurations...");
     // ConfigManager.loadDefaults();
 
     logger.info("Application initialized successfully");
