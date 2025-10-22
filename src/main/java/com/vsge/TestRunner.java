@@ -43,9 +43,9 @@ public class TestRunner {
         Note d4 = c4.transpose(2);
         Note c5 = c4.transpose(12);
         
-        assert c4.getMidiNumber() == 60 : "C4 should be MIDI 60";
-        assert d4.getPitch() == Note.PitchClass.D : "Transposed note should be D";
-        assert c5.getOctave() == 5 : "Octave up should be octave 5";
+        assertTrue(c4.getMidiNumber() == 60, "C4 should be MIDI 60");
+        assertTrue(d4.getPitch() == Note.PitchClass.D, "Transposed note should be D");
+        assertTrue(c5.getOctave() == 5, "Octave up should be octave 5");
         
         System.out.println("   ✓ Note creation and transposition working");
     }
@@ -58,13 +58,13 @@ public class TestRunner {
         Chord cMinor = ChordFactory.create(c4, ChordType.MINOR);
         Chord c7 = ChordFactory.create(c4, ChordType.DOMINANT7);
         
-        assert cMajor.getNotes().size() == 3 : "Major chord should have 3 notes";
-        assert cMinor.getNotes().size() == 3 : "Minor chord should have 3 notes";
-        assert c7.getNotes().size() == 4 : "Dominant 7th should have 4 notes";
+        assertTrue(cMajor.getNotes().size() == 3, "Major chord should have 3 notes");
+        assertTrue(cMinor.getNotes().size() == 3, "Minor chord should have 3 notes");
+        assertTrue(c7.getNotes().size() == 4, "Dominant 7th should have 4 notes");
         
         // Test chord factory from string
         Chord fromString = ChordFactory.createFromString("Am");
-        assert fromString.getRoot().getPitch() == Note.PitchClass.A : "Should create A minor";
+        assertTrue(fromString.getRoot().getPitch() == Note.PitchClass.A, "Should create A minor");
         
         System.out.println("   ✓ Chord creation and factory working");
     }
@@ -78,9 +78,9 @@ public class TestRunner {
         );
         
         var chords = pop.generateChords();
-        assert chords.size() == 4 : "Pop progression should have 4 chords";
-        assert chords.get(0).getRoot().getPitch() == Note.PitchClass.C : "First chord should be C";
-        assert chords.get(1).getRoot().getPitch() == Note.PitchClass.G : "Second chord should be G";
+        assertTrue(chords.size() == 4, "Pop progression should have 4 chords");
+        assertTrue(chords.get(0).getRoot().getPitch() == Note.PitchClass.C, "First chord should be C");
+        assertTrue(chords.get(1).getRoot().getPitch() == Note.PitchClass.G, "Second chord should be G");
         
         System.out.println("   ✓ Chord progression generation working");
     }
@@ -92,12 +92,12 @@ public class TestRunner {
         Chord chord = ChordFactory.create(c4, ChordType.MAJOR);
         
         String[] styleNames = StyleFactory.getAvailableStyles();
-        assert styleNames.length == 4 : "Should have 4 play styles";
+        assertTrue(styleNames.length == 4, "Should have 4 play styles");
         
         for (String styleName : styleNames) {
             PlayStyle style = StyleFactory.create(styleName);
             var events = style.generatePattern(chord, 4, 120);
-            assert !events.isEmpty() : "Style should generate note events";
+            assertTrue(!events.isEmpty(), "Style should generate note events");
         }
         
         System.out.println("   ✓ All play styles working");
@@ -107,19 +107,19 @@ public class TestRunner {
         System.out.println("\n5. Testing Song Library...");
         
         var songs = SongLibrary.getPresetSongs();
-        assert songs.size() == 5 : "Should have 5 preset songs";
+        assertTrue(songs.size() == 5, "Should have 5 preset songs");
         
         Song letItBe = SongLibrary.getSongByTitle("Let It Be");
-        assert letItBe != null : "Should find Let It Be";
-        assert letItBe.getArtist().equals("The Beatles") : "Should have correct artist";
+        assertTrue(letItBe != null, "Should find Let It Be");
+        assertTrue(letItBe.getArtist().equals("The Beatles"), "Should have correct artist");
         
         var rockSongs = SongLibrary.getSongsByGenre("Rock");
-        assert rockSongs.size() >= 2 : "Should have multiple rock songs";
+        assertTrue(rockSongs.size() >= 2, "Should have multiple rock songs");
         
         System.out.println("   ✓ Song library working");
     }
     
-    private static void assert(boolean condition, String message) {
+    private static void assertTrue(boolean condition, String message) {
         if (!condition) {
             throw new AssertionError(message);
         }

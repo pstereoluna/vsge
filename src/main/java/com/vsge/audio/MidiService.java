@@ -68,11 +68,11 @@ public class MidiService implements AudioService {
             // Initialize scheduler for timed note events
             scheduler = Executors.newScheduledThreadPool(4);
             
-            // Set default instruments
-            setInstrument(DEFAULT_CHANNEL, GUITAR_INSTRUMENT);
-            
             initialized = true;
             logger.info("MIDI service initialized successfully");
+            
+            // Set default instruments (after initialization)
+            setInstrument(DEFAULT_CHANNEL, GUITAR_INSTRUMENT);
             
         } catch (MidiUnavailableException e) {
             logger.severe("Failed to initialize MIDI service: " + e.getMessage());

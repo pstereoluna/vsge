@@ -1,7 +1,7 @@
 package com.vsge;
 
 import com.vsge.ui.ConsoleUI;
-import com.vsge.audio.MidiService;
+import com.vsge.audio.ImprovedMidiService;
 import java.util.logging.Logger;
 
 /**
@@ -40,8 +40,8 @@ public class Main {
    * Initializes application components.
    */
   private static void initializeApplication() throws Exception {
-    logger.fine("Initializing MIDI service...");
-    MidiService.getInstance().initialize();
+    logger.fine("Initializing improved MIDI service...");
+    ImprovedMidiService.getInstance().initialize();
 
     logger.fine("Loading default configurations...");
     // ConfigManager.loadDefaults();

@@ -215,9 +215,43 @@ mvn test
 - **Proper exception handling**
 - **Immutable value objects** where appropriate
 
+## GUI Application
+
+VSGE now includes a **Swing-based graphical user interface** for interactive chord playing!
+
+### Launch the GUI:
+```bash
+# Run the graphical interface
+java -cp target/classes com.vsge.ui.VSGEGui
+```
+
+### GUI Features:
+- **7 Chord Buttons**: I, ii, iii, IV, V, vi, vii° (Roman numerals)
+- **Style Selection**: Folk, Pop, Jazz, Rock
+- **Key Selection**: C, D, E, F, G, A, B
+- **Strum Speed Slider**: Adjust tempo (50-200 BPM)
+- **Stop Button**: Stop all currently playing sounds
+- **Visual Feedback**: Buttons change color when playing
+- **Real-time Status**: Shows current action and settings
+
+### GUI Layout:
+```
++---------------------------------+
+| Virtual Stringless Guitar       |
+| 🎸 Click a chord to play!        |
+|                                 |
+| [ I ] [ ii ] [ iii ] [ IV ]     |
+| [ V ] [ vi ] [ vii° ]           |
+|                                 |
+| Style: [Folk▼] Key: [C▼]        |
+| Speed: [====●====] [Stop All]   |
+|                                 |
+| Ready to play!                  |
++---------------------------------+
+```
+
 ## Future Enhancements
 
-- **Swing GUI**: Graphical user interface
 - **MIDI Export**: Save performances to MIDI files
 - **Advanced Voicing**: More sophisticated chord voicing algorithms
 - **Visual Chord Diagrams**: ASCII art chord representations

@@ -65,11 +65,11 @@ public class ImprovedMidiService implements AudioService {
             
             scheduler = Executors.newScheduledThreadPool(4);
             
-            // Set up guitar channel with better sound
-            setupGuitarChannel();
-            
             initialized = true;
             logger.info("Improved MIDI service initialized with enhanced guitar sound");
+            
+            // Set up guitar channel with better sound (after initialization)
+            setupGuitarChannel();
             
         } catch (MidiUnavailableException e) {
             logger.severe("Failed to initialize improved MIDI service: " + e.getMessage());
