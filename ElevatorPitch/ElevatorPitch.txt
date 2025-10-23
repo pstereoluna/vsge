@@ -1,13 +1,17 @@
-Project Title:
-🎹 Virtual Piano Studio
+🎹 Final Project: Virtual Piano Studio / KeyChord
 
 Team Members:
 Jiaxin Jia, Xiaoyuan Lu
 
-Elevator Pitch:
-Virtual Piano Studio is an interactive Java-based application that transforms digital piano playing into a more engaging and creative experience.
-Unlike standard virtual pianos that only play single notes, our system allows users to trigger complete chords with a single click using an intelligent chord-generation engine.
-The goal is to make music creation simple and intuitive — enabling anyone, even without formal training, to produce rich and expressive piano sounds through an easy-to-use interface.
+Elevator Pitch
+
+Virtual Piano Studio — also known as KeyChord — is a lightweight Java-based music application that transforms any computer keyboard into a powerful, multi-track music sampler.
+We designed it for aspiring musicians, bedroom producers, and hobbyists who want to sketch musical ideas instantly, without needing expensive MIDI controllers or complex software.
+
+Unlike standard virtual pianos that only play single notes, our system lets users trigger full chords and harmonies with one click, turning simple keystrokes into expressive performances.
+KeyChord allows you to layer melodies, create loops, and build entire song drafts using only your QWERTY keyboard.
+
+Our goal is to make music creation more accessible and intuitive — turning everyday inspiration into a complete composition within seconds. Beyond piano, we plan to incorporate more instruments, so users can create their own instant band and compose freely.
 
 Rough Draft: Domain Objects / Class Ideas
 
@@ -15,14 +19,15 @@ Note – represents a single musical pitch
 Chord – defines groups of notes that form a harmony
 ChordFactory – creates chords (Major, Minor, 7th, etc.)
 MidiService – manages playback and timing
-PianoKey – represents an individual key on the piano GUI
-ChordButton – triggers chord playback through the ChordFactory
-VirtualPianoUI – provides the graphical interface for user interaction
-RecordingManager – handles user recording and playback
+KeyMapper – maps QWERTY keys to specific notes/chords
+Track – represents a loop layer for multi-track composition
+RecordingManager – records and replays performances
+VirtualPianoUI – GUI for visual keyboard and chord triggering
 
-Optional Future Extensions:
+Optional Future Extensions
 
+Multi-instrument support (guitar, bass, drums)
 User-defined chord progressions
 MIDI file export
-Visual chord diagrams
-Learning/Practice mode with feedback
+Real-time recording and playback visualization
+Practice mode with feedback
