@@ -1,10 +1,10 @@
 package com.vsge;
 
 import com.vsge.audio.ImprovedMidiService;
-import com.vsge.core.chord.Chord;
-import com.vsge.core.chord.ChordFactory;
-import com.vsge.core.chord.ChordType;
-import com.vsge.core.theory.Note;
+import com.vsge.music.chord.Chord;
+import com.vsge.music.chord.ChordFactory;
+import com.vsge.music.chord.ChordType;
+import com.vsge.music.theory.Note;
 import javax.sound.midi.*;
 
 /**

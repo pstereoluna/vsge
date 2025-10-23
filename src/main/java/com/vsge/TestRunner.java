@@ -1,14 +1,14 @@
 package com.vsge;
 
-import com.vsge.core.chord.Chord;
-import com.vsge.core.chord.ChordFactory;
-import com.vsge.core.chord.ChordType;
-import com.vsge.core.progression.ChordProgression;
-import com.vsge.core.theory.Note;
+import com.vsge.music.chord.Chord;
+import com.vsge.music.chord.ChordFactory;
+import com.vsge.music.chord.ChordType;
+import com.vsge.music.progression.ChordProgression;
+import com.vsge.music.theory.Note;
 import com.vsge.style.PlayStyle;
 import com.vsge.style.StyleFactory;
-import com.vsge.song.Song;
-import com.vsge.song.SongLibrary;
+import com.vsge.examples.Song;
+import com.vsge.examples.SongLibrary;
 
 /**
  * Simple test runner to verify core VSGE functionality.

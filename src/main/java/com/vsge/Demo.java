@@ -1,16 +1,16 @@
 package com.vsge;
 
 import com.vsge.audio.ImprovedMidiService;
-import com.vsge.core.chord.Chord;
-import com.vsge.core.chord.ChordFactory;
-import com.vsge.core.chord.ChordType;
-import com.vsge.core.progression.ChordProgression;
-import com.vsge.core.theory.Note;
-import com.vsge.engine.PlaybackEngine;
+import com.vsge.music.chord.Chord;
+import com.vsge.music.chord.ChordFactory;
+import com.vsge.music.chord.ChordType;
+import com.vsge.music.progression.ChordProgression;
+import com.vsge.music.theory.Note;
+import com.vsge.engine.playback.PlaybackEngine;
 import com.vsge.style.PlayStyle;
 import com.vsge.style.StyleFactory;
-import com.vsge.song.Song;
-import com.vsge.song.SongLibrary;
+import com.vsge.examples.Song;
+import com.vsge.examples.SongLibrary;
 
 /**
  * Demo class that showcases VSGE functionality without requiring user input.

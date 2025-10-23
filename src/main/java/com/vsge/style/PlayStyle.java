@@ -1,7 +1,7 @@
 package com.vsge.style;
 
-import com.vsge.core.chord.Chord;
-import com.vsge.core.theory.Note;
+import com.vsge.music.chord.Chord;
+import com.vsge.music.theory.Note;
 import java.util.List;
 
 /**

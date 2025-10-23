@@ -1,13 +1,13 @@
 package com.vsge;
 
 import com.vsge.audio.ImprovedMidiService;
-import com.vsge.core.chord.Chord;
-import com.vsge.core.chord.ChordFactory;
-import com.vsge.core.chord.ChordType;
-import com.vsge.core.theory.Note;
-import com.vsge.engine.EnhancedPlaybackEngine;
-import com.vsge.engine.HumanizationSettings;
-import com.vsge.core.rhythm.RhythmPatternFactory;
+import com.vsge.music.chord.Chord;
+import com.vsge.music.chord.ChordFactory;
+import com.vsge.music.chord.ChordType;
+import com.vsge.music.theory.Note;
+import com.vsge.engine.playback.EnhancedPlaybackEngine;
+import com.vsge.engine.humanizer.HumanizationSettings;
+import com.vsge.music.rhythm.RhythmPatternFactory;
 
 /**
  * Enhanced demo showcasing the new rhythm patterns and humanization features.
