@@ -1,0 +1,47 @@
+Project Title:
+🎹 Virtual Piano Studio
+
+Team Members:
+
+Xiaoyuan Lu
+
+Jiaxin Jia
+
+
+Elevator Pitch:
+Virtual Piano Studio is an interactive Java-based music application that combines a digital piano with intelligent, style-based accompaniment.
+Unlike standard virtual pianos that only play individual notes, our system allows users to trigger complete chords and accompaniment patterns with one click, using a preserved ChordFactory and PlayStyle engine from our previous “stringless guitar” design.
+Users can choose musical styles such as Pop, Folk, or Jazz, and the system will automatically generate harmonically accurate piano accompaniments.
+Our goal is to make music creation more expressive and intuitive, even for those without formal training — turning simple interaction into full, rich performances.
+
+Rough Draft: Domain Objects / Class Ideas
+
+Note – represents a single musical pitch
+
+Chord – defines groups of notes that form a harmony
+
+ChordFactory – creates chords (Major, Minor, 7th, etc.)
+
+PlayStyle – interface defining rhythmic/accompaniment patterns
+
+StyleFactory – generates styles such as Pop, Folk, Jazz
+
+MidiService – manages playback and timing
+
+PianoKey – individual key on the piano GUI
+
+ChordButton – triggers chord playback through the ChordFactory
+
+VirtualPianoUI – GUI for interactive performance
+
+RecordingManager – handles user recording and playback
+
+Optional Future Extensions:
+
+User-defined chord progressions
+
+MIDI file export
+
+Visual chord diagrams
+
+Learning/Practice mode with feedback
