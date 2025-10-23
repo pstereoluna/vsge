@@ -17,31 +17,18 @@ Our goal is to make music creation more expressive and intuitive, even for those
 Rough Draft: Domain Objects / Class Ideas
 
 Note – represents a single musical pitch
-
 Chord – defines groups of notes that form a harmony
-
 ChordFactory – creates chords (Major, Minor, 7th, etc.)
-
-PlayStyle – interface defining rhythmic/accompaniment patterns
-
 StyleFactory – generates styles such as Pop, Folk, Jazz
-
 MidiService – manages playback and timing
-
 PianoKey – individual key on the piano GUI
-
 ChordButton – triggers chord playback through the ChordFactory
-
 VirtualPianoUI – GUI for interactive performance
-
 RecordingManager – handles user recording and playback
 
 Optional Future Extensions:
 
 User-defined chord progressions
-
 MIDI file export
-
 Visual chord diagrams
-
 Learning/Practice mode with feedback
