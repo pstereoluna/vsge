@@ -11,7 +11,8 @@ We designed it for aspiring musicians, bedroom producers, and hobbyists who want
 Unlike standard virtual pianos that only play single notes, our system lets users trigger full chords and harmonies with one click, turning simple keystrokes into expressive performances.
 KeyChord allows you to layer melodies, create loops, and build entire song drafts using only your QWERTY keyboard.
 
-Our goal is to make music creation more accessible and intuitive — turning everyday inspiration into a complete composition within seconds. Beyond piano, we plan to incorporate more instruments, so users can create their own instant band and compose freely.
+Our goal is to make music creation more accessible and intuitive — turning everyday inspiration into a complete composition within seconds. 
+Beyond piano, we plan to incorporate more instruments, so users can create their own instant band and compose freely.
 
 Rough Draft: Domain Objects / Class Ideas
 
